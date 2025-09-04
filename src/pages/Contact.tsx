@@ -16,6 +16,7 @@ import moneyImage from "@/assets/money.png";
 import formImage from "@/assets/form.png";
 import { db } from "../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
+import iconImage from '@/assets/icon.png';
 
 // A modal component to display the user's message
 const MessageModal = ({ isOpen, onClose, formData }) => {
@@ -153,7 +154,7 @@ export function Contact() {
             {/* Eagle Icon */}
             <div className="flex justify-center mb-6 -mt-20">
               <img
-                src="/11394956_eagle_nature_fauna_animal_wild_icon.png"
+                src={iconImage}
                 alt="Eagle Icon"
                 className="h-24 w-24 object-contain drop-shadow-lg filter invert"
               />
