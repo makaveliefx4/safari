@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
 import moneyImage from '@/assets/money.png';
 import binImage from '@/assets/bin.png';
-
+import iconImage from '@/assets/icon.png';
 export function ActivitiesSection() {
   const navigate = useNavigate();
 
@@ -65,7 +65,7 @@ export function ActivitiesSection() {
           </CardContent>
         </Card>
         <img
-                src="/public/11394956_eagle_nature_fauna_animal_wild_icon.png"
+                src={iconImage}
                 alt="Binoculars"
                 className="hidden md:block absolute right-[-10px] top-1/2 -translate-y-1/2 w-72 opacity-30 pointer-events-none"
                 style={{ zIndex: 0 }}
