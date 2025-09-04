@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Mail, Play, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import trueImage from '@/assets/true.jpg';
+import iconImage from '@/assets/icon.png';
 
 export function HeroSection() {
   return (
@@ -21,7 +22,7 @@ export function HeroSection() {
           {/* Eagle Icon */}
             <div className="flex justify-center mb-6 -mt-20">
             <img
-              src="/11394956_eagle_nature_fauna_animal_wild_icon.png"
+              src={iconImage}
               alt="Eagle Icon"
               className="h-24 w-24 object-contain drop-shadow-lg filter invert"
             />
