@@ -83,7 +83,7 @@ export function Navigation() {
             onClick={toggleMenu}
             className={cn(
               "group flex flex-col justify-between w-8 h-6 p-1 cursor-pointer transition-all duration-300",
-              scrollDirection === "down" ? "text-white" : "text-black"
+              scrollDirection === "down" ? "text-black" : "text-black"
             )}
           >
             <span className="block h-0.5 w-full bg-current rounded transition-all duration-300 group-hover:w-5 group-hover:translate-x-1" />
