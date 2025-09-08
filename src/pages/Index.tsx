@@ -1,0 +1,100 @@
+import React from 'react';
+import { Navigation } from '@/components/Navigation';
+import { HeroSection } from '@/components/HeroSection';
+import { DestinationsSection } from '@/components/DestinationsSection';
+import { SafariExperiencesSection } from '@/components/SafariExperiencesSection';
+import { AccommodationSection } from '@/components/AccommodationSection';
+import { ActivitiesSection } from '@/components/ActivitiesSection';
+import { WildlifeSection } from '@/components/WildlifeSection';
+import { PackagesSection } from '@/components/PackagesSection';
+import { StatsSection } from '@/components/StatsSection';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
+import { ConservationSection } from '@/components/ConservationSection';
+import { FAQSection } from '@/components/FAQSection';
+import { NewsletterSection } from '@/components/NewsletterSection';
+
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+
+      {/* Hero Section */}
+      <HeroSection />
+
+      {/* Main Content Wrapper with responsive padding */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+        {/* Each Section */}
+        <DestinationsSection />
+        <SafariExperiencesSection />
+        <AccommodationSection />
+        <ActivitiesSection />
+        <WildlifeSection />
+        <PackagesSection />
+        <StatsSection />
+        <TestimonialsSection />
+        <ConservationSection />
+        <FAQSection />
+        <NewsletterSection />
+      </main>
+
+      {/* Footer */}
+      <footer className="py-12 bg-primary font-mono text-muted-foreground mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            {/* Column 1 */}
+            <div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gradient-luxury mb-4">
+                Safari Luxury
+              </h3>
+              <p className="text-sm sm:text-base text-primary-foreground/80 leading-relaxed">
+                Creating unforgettable African safari experiences while supporting 
+                conservation and local communities.
+              </p>
+            </div>
+
+            {/* Column 2 */}
+            <div>
+              <h4 className="font-semibold mb-4">Destinations</h4>
+              <ul className="space-y-2 text-sm sm:text-base text-primary-foreground/80">
+                <li>Serengeti National Park</li>
+                <li>Ngorongoro Crater</li>
+                <li>Zanzibar Island</li>
+                <li>Tarangire Park</li>
+              </ul>
+            </div>
+
+            {/* Column 3 */}
+            <div>
+              <h4 className="font-semibold mb-4">Experiences</h4>
+              <ul className="space-y-2 text-sm sm:text-base text-primary-foreground/80">
+                <li>Luxury Safari</li>
+                <li>Family Safari</li>
+                <li>Honeymoon Safari</li>
+                <li>Photography Tours</li>
+              </ul>
+            </div>
+
+            {/* Column 4 */}
+            <div>
+              <h4 className="font-semibold mb-4">Contact</h4>
+              <ul className="space-y-2 text-sm sm:text-base text-primary-foreground/80">
+                <li>+255 698 809 207</li>
+                <li>hello@safariluxury.com</li>
+                <li>Arusha, Tanzania</li>
+                <li>Mon-Sat 8AM-6PM EAT</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-primary-foreground/20 pt-8 text-center text-xs sm:text-sm text-primary-foreground/60">
+            <p>
+              &copy; 2025 Safari Luxury. All rights reserved. • Conservation & Community Partners
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
