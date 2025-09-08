@@ -3,7 +3,8 @@ import { Mail, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
-import bothImage from '@/assets/both.png'; // 
+import bothImage from '@/assets/both.png'; 
+import iconImage from '@/assets/icon.png';
 
 export function NewsletterSection() {
   const [email, setEmail] = useState('');
@@ -74,7 +75,7 @@ export function NewsletterSection() {
           <div className="hidden md:flex flex-col items-center justify-center w-1/2 pr-8">
             {/* Replace with your own image if needed */}
             <img
-              src="/11394956_eagle_nature_fauna_animal_wild_icon.png"
+              src={iconImage}
               alt="Eagle"
               className="w-48 h-auto mb-4"
               style={{ filter: 'grayscale(100%)', objectFit: 'contain' }}
