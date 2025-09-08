@@ -18,6 +18,7 @@ import { db } from "../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import iconImage from '@/assets/icon.png';
 
+
 // A modal component to display the user's message
 const MessageModal = ({ isOpen, onClose, formData }) => {
   if (!isOpen) return null;
@@ -474,8 +475,8 @@ export function Contact() {
 
               {/* Decorative Image (optional, right side on desktop) */}
               <img
-                src="/public/11394956_eagle_nature_fauna_animal_wild_icon.png"
-                alt="Binoculars"
+                src={iconImage}
+                alt="Eagle"
                 className="hidden md:block absolute right-[-100px] top-1/2 -translate-y-1/2 w-72 opacity-30 pointer-events-none"
                 style={{ zIndex: 0 }}
               />
