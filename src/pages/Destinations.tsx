@@ -71,7 +71,7 @@ export default function Destinations() {
               Other Top Destinations
             </h2>
             <div className="mb-8">
-              <span className="text-xl tracking-widest text-white">. . . . . . .</span>
+              <span className="text-xl tracking-widest text-accent">. . . . . . .</span>
             </div>
           </div>
         </div>
