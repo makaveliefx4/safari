@@ -64,14 +64,14 @@ export default function Destinations() {
             className="mx-auto mb-4 w-20 h-20 object-contain"
           />
           <div className="text-center mb-16 animate-fade-up">
-            <p className="text-sm font-semibold uppercase text-muted-foreground tracking-widest mb-2">
+            <p className="text-sm font-semibold uppercase text-white tracking-widest mb-2">
               Combine With
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Other Top Destinations
             </h2>
             <div className="mb-8">
-              <span className="text-xl tracking-widest text-accent">. . . . . . .</span>
+              <span className="text-xl tracking-widest text-white">. . . . . . .</span>
             </div>
           </div>
         </div>
