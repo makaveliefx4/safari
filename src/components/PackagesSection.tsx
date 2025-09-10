@@ -214,7 +214,7 @@ export function PackagesSection() {
 
                 {/* CTA */}
                 <Button 
-                  variant={pkg.popular ? 'luxury' : 'safari'} 
+                  variant={pkg.popular ? 'outline' : 'outline'} 
                   size="lg" 
                   className="w-full group w-full md:w-auto px-8 py-6 rounded-full shadow-lg border-2 border-border"
                   onClick={() => navigate('/contact')}
@@ -231,10 +231,10 @@ export function PackagesSection() {
         <Card className='bg-[url("https://cloudfront.safaribookings.com/blog/2024/10/00-Top_10_Best_African_Safari_Parks_and_Destinations_of_2024-BW-header1200px.jpg")] bg-fixed bg-cover bg-center shadow-[var(--shadow-earth)]'>
          <div className="absolute inset-0 "></div>
           <CardContent className="p-12 text-center bg-black/50">
-            <h3 className="text-3xl font-bold  text-foreground mb-4">
+            <h3 className="text-3xl font-bold  text-white mb-4">
               Need Something Different?
             </h3>
-            <p className="text-xl text-muted-foreground mb-8 font-serif max-w-2xl mx-auto">
+            <p className="text-xl text-white mb-8 font-serif max-w-2xl mx-auto">
               Our safari specialists can create a completely custom itinerary tailored to your 
               specific interests, budget, and travel dates.
             </p>
@@ -242,7 +242,7 @@ export function PackagesSection() {
                <Button
                 variant="outline"
                 size="lg"
-                className="bg-transparent text-black w-full md:w-auto px-8 py-6 rounded-full shadow-lg border-2 border-border"
+                className="bg-transparent text-white w-full md:w-auto px-8 py-6 rounded-full shadow-lg border-2 border-border"
                 onClick={() => navigate('/contact')}
               >
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
