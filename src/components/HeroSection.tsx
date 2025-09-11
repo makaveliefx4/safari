@@ -39,14 +39,14 @@ export function HeroSection() {
           </div>
         
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-center font-serif italic text-white/90 mb-5 max-w-3xl mx-auto leading-tight">
+          <p className="text-xl md:text-2xl text-center font-serif  text-white/90 mb-5 max-w-3xl mx-auto leading-tight">
             In the Heart of the Wilderness.
           </p>
             {/* Main Heading */}
           <h1 className="text-3xl md:text-3xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Discover The Untamed.
           </h1>
-           <p className="text-xl italic text-center font-serif md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-tight">
+           <p className="text-xl  text-center font-serif md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-tight">
             Expect the unexpected.
           </p>
 
