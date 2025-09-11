@@ -38,7 +38,7 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="py-12 bg-primary font-mono text-muted-foreground mt-16">
+      <footer className=" bg-primary font-mono  mt-16 bg-gradient-to-b from-white to-yellow/500 text-green/20 relative py-[15px] md:py-[25px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {/* Column 1 */}
@@ -46,7 +46,7 @@ const Index = () => {
               <h3 className="text-xl sm:text-2xl font-bold text-gradient-luxury mb-4">
                 Safari Luxury
               </h3>
-              <p className="text-sm sm:text-base text-primary-foreground/80 leading-relaxed">
+              <p className="text-sm sm:text-base text-green leading-relaxed">
                 Creating unforgettable African safari experiences while supporting 
                 conservation and local communities.
               </p>
@@ -55,7 +55,7 @@ const Index = () => {
             {/* Column 2 */}
             <div>
               <h4 className="font-semibold mb-4">Destinations</h4>
-              <ul className="space-y-2 text-sm sm:text-base text-primary-foreground/80">
+              <ul className="space-y-2 text-sm sm:text-base text-green/80">
                 <li>Serengeti National Park</li>
                 <li>Ngorongoro Crater</li>
                 <li>Zanzibar Island</li>
@@ -66,7 +66,7 @@ const Index = () => {
             {/* Column 3 */}
             <div>
               <h4 className="font-semibold mb-4">Experiences</h4>
-              <ul className="space-y-2 text-sm sm:text-base text-primary-foreground/80">
+              <ul className="space-y-2 text-sm sm:text-base text-green/90">
                 <li>Luxury Safari</li>
                 <li>Family Safari</li>
                 <li>Honeymoon Safari</li>
@@ -77,7 +77,7 @@ const Index = () => {
             {/* Column 4 */}
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm sm:text-base text-primary-foreground/80">
+              <ul className="space-y-2 text-sm sm:text-base text-green/90">
                 <li>+255 698 809 207</li>
                 <li>hello@safariluxury.com</li>
                 <li>Arusha, Tanzania</li>
