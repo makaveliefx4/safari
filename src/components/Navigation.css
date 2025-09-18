@@ -1,0 +1,30 @@
+.menu-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon-container .line:nth-child(2) {
+  width: 70%;
+  align-self: flex-end; 
+}
+
+/* Hover Animation */
+.menu-icon-container:hover .line:nth-child(1) {
+  transform: translateY(3px) rotate(10deg);
+}
+
+.menu-icon-container:hover .line:nth-child(3) {
+  transform: translateY(-3px) rotate(-10deg);
+}

@@ -1,0 +1,164 @@
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import { X, Compass, MapPin, Phone } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+import './Navigation.css';
+import iconImage from '@/assets/icon.png';
+
+const navItems = [
+  { to: '/', label: 'Home', icon: Compass },
+  { to: '/destinations', label: 'Destinations', icon: MapPin },
+  { to: '/Contact', label: 'Contact', icon: Phone },
+];
+
+export function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Detect scroll direction
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+
+      // Show/hide nav visibility
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      // Detect scrolled state
+      if (currentScrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"; 
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isOpen]);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  return (
+    <>
+      {!isOpen && (
+        <div
+          className={cn(
+            'fixed top-4 right-4 z-50 transition-all duration-300',
+            isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+			
+          )}
+        >
+          <button
+            onClick={toggleMenu}
+            className={cn(
+              "group flex flex-col justify-between w-8 h-6 p-1 cursor-pointer transition-all duration-300",
+              scrollDirection === "down" ? "text-white" : "text-black"
+            )}
+          >
+            <span className="block h-0.5 w-full bg-current rounded transition-all duration-300 group-hover:w-5 group-hover:translate-x-1" />
+            <span className="block h-0.5 w-full bg-current rounded transition-all duration-300" />
+            <span className="block h-0.5 w-full bg-current rounded transition-all duration-300 group-hover:w-5 group-hover:-translate-x-1" />
+          </button>
+        </div>
+      )}
+
+      <div
+        className={cn(
+          'fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-all duration-300',
+          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        )}
+        onClick={() => setIsOpen(false)}
+      />
+
+      <nav
+        className={cn(
+          'fixed top-0 left-0 h-full w-72 sm:w-80 bg-card/95 backdrop-blur-lg border-r border-border z-50 transform transition-transform duration-500 ease-out flex flex-col',
+          isOpen ? 'translate-x-0' : '-translate-x-full',
+          isScrolled ? " text-muted-foreground" : ""
+        )}
+      >
+        <button
+          onClick={() => setIsOpen(false)}
+          className="absolute top-4 right-4 text-foreground hover:text-accent transition"
+        >
+          <X className="h-6 w-6" />
+        </button>
+
+        <div className="flex flex-col flex-1 overflow-y-auto p-6 space-y-8">
+          <div className="flex flex-col items-center text-center">
+            <img
+              src={iconImage}
+              alt="African Wildlife Icon"
+              className="mb-2 w-16 h-16 sm:w-20 sm:h-20 object-contain"
+            />
+            <p className="text-xs sm:text-sm font-semibold uppercase text-muted-foreground tracking-widest">
+              The unexpected safari
+            </p>
+            <h2 className="text-xl sm:text-3xl font-bold text-foreground mt-2">
+              LUXURY SAFARI
+            </h2>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            {navItems.map(({ to, label, icon: Icon }, index) => (
+              <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) =>
+                  cn(
+                    'flex items-center gap-3 p-3 rounded-lg transition-all duration-300 group',
+                    isActive
+                      ? 'bg-white text-emerald-500 shadow-[var(--shadow-safari)]'
+                      : 'text-foreground hover:bg-white/20 hover:backdrop-blur-sm hover:text-accent-foreground'
+                  )
+                }
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <Icon className="h-5 w-5 shrink-0" />
+                <span className="font-medium truncate">{label}</span>
+              </NavLink>
+            ))}
+          </div>
+
+          <div className="mt-auto p-4 bg-gradient-safari rounded-lg border border-border/50">
+            <h3 className="font-semibold text-base sm:text-lg mb-2">Ready to Explore?</h3>
+            <p className="text-muted-foreground text-xs sm:text-sm mb-3">
+              Contact our safari specialists for a personalized adventure.
+            </p>
+            <Button variant="safari" size="sm" className="w-full">
+              Get Quote
+            </Button>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+}
