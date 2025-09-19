@@ -3,6 +3,7 @@ import { ArrowRight, Mail, Play, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import trueImage from '@/assets/true.jpg';
 import ivoImage from '@/assets/ivo.png';
+import TripaImage from '@/assets/Tripa.png'
 
 export function HeroSection() {
   return (
@@ -23,11 +24,11 @@ export function HeroSection() {
             </div>
           <div className="flex justify-center mb-6 -mt-15 ">
             <img
-              src="https://oscarafrica.com/wp-content/themes/oscarafrica-child/images/awards.png"
+              src={TripaImage}
               alt="Awards"
-              width={80}
-              height={124}
-              className="object-contain"/>
+              width={120}
+              height={186}
+              className=" h-45 w-45 object-contain invert"/>
           </div>
         
           <p className="text-xl md:text-2xl text-center font-serif  text-white/90 mb-5 max-w-3xl mx-auto leading-tight">

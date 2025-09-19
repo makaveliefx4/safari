@@ -501,14 +501,9 @@ export function Contact() {
           <span className="text-xl font-bold tracking-widest text-muted-foreground">
             . . . . . . .
           </span>
-        </div>
-        
-      </section>
-
-        
+        </div>     
+      </section>       
       </div>
-      
-  
       <MessageModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

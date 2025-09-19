@@ -1,7 +1,8 @@
 import React from 'react';
 import { Star, Award, Globe, Heart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
+import TripaImage from '@/assets/Tripa.png'
+ 
 const stats = [
 	{
 		icon: Star,
@@ -35,7 +36,7 @@ const stats = [
 
 const achievements = [
 	'Featured in National Geographic',
-	"TripAdvisor Travelers' Choice Award 2024",
+	"TripAdvisor Travelers' Choice Award 2025",
 	'African Tourism Board Excellence Award',
 	'Conde Nast Top Safari Operator',
 	'Conservation Partnership Recognition',
@@ -44,15 +45,15 @@ const achievements = [
 
 export function StatsSection() {
 	return (
-		<section className="py-24 bg-gradient-safari">		
+		<section className="py-24 bg-gradient-safari rounded-[40px]">		
 			<div className="max-w-7xl mx-auto px-6 animate-fade-in-out">			
 				<div className="flex justify-center mb-6 -mt-15 ">
 					<img
-						src="https://oscarafrica.com/wp-content/themes/oscarafrica-child/images/tripadvisor-black.svg"
+						src={TripaImage}
 						alt="Awards"
-						width={90}
-						height={124}
-						className="object-contain"/>
+						width={120}
+                        height={186}
+						className=" object-contain"/>
 			 	</div>
 			    <div className="text-center mb-16 animate-fade-up"> 
 					<p className="text-sm font-semibold uppercase text-muted-foreground tracking-widest mb-2">

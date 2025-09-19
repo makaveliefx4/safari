@@ -1,50 +1,57 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { X, Compass, MapPin, Phone } from 'lucide-react';
+import { X, Compass, MapPin, Phone, ChevronDown, HomeIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import './Navigation.css';
 import ivoImage from '@/assets/ivo.png';
+import { Label } from 'recharts';
 
 const navItems = [
-  { to: '/', label: 'Home', icon: Compass },
+  { to: '/', label: 'Home', icon: HomeIcon },
   { to: '/destinations', label: 'Destinations', icon: MapPin },
+  {
+    label: 'Experiences',
+    icon: Compass, 
+    isDropdown: true,
+    subItems: [
+      { to: '/big-five', Label: 'Big Five'},
+      { to: '/hiking', label: 'Hiking' },
+      { to: '/great-migration', label: 'Great Migration' },
+      { to: '/friendly', label: 'Child Friendly' },
+      { to: '/beaches', label: 'Beaches'},
+    ],
+  },
   { to: '/Contact', label: 'Contact', icon: Phone },
 ];
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isExperiencesOpen, setIsExperiencesOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
+  const [scrollDirection, setScrollDirection] = useState("up");
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      // Detect scroll direction
       if (currentScrollY > lastScrollY) {
         setScrollDirection("down");
       } else {
         setScrollDirection("up");
       }
-
-      // Show/hide nav visibility
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
       }
-
-      // Detect scrolled state
       if (currentScrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
-
       setLastScrollY(currentScrollY);
     };
 
@@ -58,7 +65,7 @@ export function Navigation() {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden"; 
+      document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
@@ -73,7 +80,6 @@ export function Navigation() {
           className={cn(
             'fixed top-4 right-4 z-50 transition-all duration-300',
             isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
-			
           )}
         >
           <button
@@ -128,24 +134,76 @@ export function Navigation() {
           </div>
 
           <div className="flex flex-col gap-3">
-            {navItems.map(({ to, label, icon: Icon }, index) => (
-              <NavLink
-                key={to}
-                to={to}
-                className={({ isActive }) =>
-                  cn(
-                    'flex items-center gap-3 p-3 rounded-lg transition-all duration-300 group',
-                    isActive
-                      ? 'bg-white text-emerald-500 shadow-[var(--shadow-safari)]'
-                      : 'text-foreground hover:bg-white/20 hover:backdrop-blur-sm hover:text-accent-foreground'
-                  )
-                }
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <Icon className="h-5 w-5 shrink-0" />
-                <span className="font-medium truncate">{label}</span>
-              </NavLink>
-            ))}
+            {navItems.map((item, index) => {
+              const Icon = item.icon;
+              if (item.isDropdown) {
+                return (
+                  <div key={item.label}>
+                    <button
+                      className={cn(
+                        'flex items-center gap-3 p-3 rounded-lg w-full text-left transition-all duration-300 group',
+                        'text-foreground hover:bg-white/20 hover:backdrop-blur-sm hover:text-accent-foreground'
+                      )}
+                      onClick={() => setIsExperiencesOpen(!isExperiencesOpen)}
+                    >
+                      {Icon && <Icon className="h-5 w-5 shrink-0" />}
+                      <span className="font-medium truncate">{item.label}</span>
+                      <ChevronDown
+                        className={cn(
+                          "h-4 w-4 ml-auto transition-transform duration-300",
+                          isExperiencesOpen ? "rotate-180" : ""
+                        )}
+                      />
+                    </button>
+                    <div
+                      className={cn(
+                        "grid transition-all duration-300 ease-in-out overflow-hidden",
+                        isExperiencesOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                      )}
+                    >
+                      <div className="overflow-hidden">
+                        <div className="flex flex-col pl-8 gap-2 py-2">
+                          {item.subItems.map((subItem) => (
+                            <NavLink
+                              key={subItem.to}
+                              to={subItem.to}
+                              className={({ isActive }) =>
+                                cn(
+                                  'flex items-center gap-3 p-2 rounded-lg transition-all duration-300',
+                                  isActive
+                                    ? 'bg-white text-emerald-500'
+                                    : 'text-foreground hover:bg-white/20 hover:text-accent-foreground'
+                                )
+                              }
+                            >
+                              <span className="font-medium truncate">{subItem.label}</span>
+                            </NavLink>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    cn(
+                      'flex items-center gap-3 p-3 rounded-lg transition-all duration-300 group',
+                      isActive
+                        ? 'bg-white text-emerald-500 shadow-[var(--shadow-safari)]'
+                        : 'text-foreground hover:bg-white/20 hover:backdrop-blur-sm hover:text-accent-foreground'
+                    )
+                  }
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <Icon className="h-5 w-5 shrink-0" />
+                  <span className="font-medium truncate">{item.label}</span>
+                </NavLink>
+              );
+            })}
           </div>
 
           <div className="mt-auto p-4 bg-gradient-safari rounded-lg border border-border/50">

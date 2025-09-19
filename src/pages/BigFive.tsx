@@ -51,7 +51,6 @@ export default function BigFivePage() {
     <div className="min-h-screen bg-gradient-to-b from-yellow-50 via-amber-100 to-stone-200 rounded-[50px]">
       <Navigation />
       
-      {/* Hero Section */}
       <section className="relative pt-24 pb-20 bg-[url('https://maasaimara.ke/wp-content/uploads/2025/02/mara-big-five.webp')] bg-cover bg-center rounded-b-[50px]">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent"></div>
 
@@ -70,7 +69,6 @@ export default function BigFivePage() {
         </div>
       </section>
 
-      {/* Big Five List */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 font-serif space-y-20">
           {BigFive.map((animal, index) => (
@@ -81,7 +79,6 @@ export default function BigFivePage() {
               <div className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ${
                 index % 2 !== 0 ? 'lg:grid-flow-col-dense' : ''}`}>
                 
-                {/* Text */}
                 <div className={`${index % 2 !== 0 ? 'order-1 lg:order-2' : ''}`}>
                   <CardContent className="p-6">
                     <h2 className="text-3xl font-bold text-yellow-800 mb-4 flex items-center gap-2">
@@ -97,7 +94,6 @@ export default function BigFivePage() {
                   </CardContent>
                 </div>
 
-                {/* Image */}
                 <div className="relative overflow-hidden rounded-[30px] shadow-lg">
                   <img 
                     src={animal.image} 
@@ -109,7 +105,6 @@ export default function BigFivePage() {
             </Card>
           ))}
 
-          {/* Buttons */}
           <div className="flex flex-col items-center gap-6 mt-12 animate-fade-in-out">
             <Button
               variant="safari-outline"
@@ -130,6 +125,7 @@ export default function BigFivePage() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }

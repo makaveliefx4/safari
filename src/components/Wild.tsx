@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import opImage from '@/assets/op.png'
 
 const cardsData = [
@@ -37,19 +37,19 @@ const cardsData = [
 
 const ImageCard = ({ title, description, imageUrl, onClick }) => (
   <div
-    className="relative w-full h-[30rem] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+    className="relative w-full h-[32rem] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
     onClick={onClick}
   >
     <img
       src={imageUrl}
       alt={title}
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
     />
-    <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-start justify-end p-4 text-left">
-      <h2 className="text-2xl font-bold text-white mb-2">
+    <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-start justify-end p-4 text-left transition-all duration-300 ease-in-out group-hover:bg-opacity-50 group-hover:items-center group-hover:justify-center group-hover:text-center">
+      <h2 className="text-2xl font-bold text-white mb-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
         {title}
       </h2>
-      <p className="text-md text-gray-200">
+      <p className="text-md text-gray-200 transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
         {description}
       </p>
     </div>
@@ -58,19 +58,19 @@ const ImageCard = ({ title, description, imageUrl, onClick }) => (
 
 const ImageCardSmall = ({ title, description, imageUrl, onClick }) => (
   <div
-    className="relative w-full h-[15rem] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+    className="relative w-full h-[15rem] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
     onClick={onClick}
   >
     <img
       src={imageUrl}
       alt={title}
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
     />
-    <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-start justify-end p-4 text-left">
-      <h2 className="text-xl font-bold text-white mb-2">
+    <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-start justify-end p-4 text-left transition-all duration-300 ease-in-out group-hover:bg-opacity-50 group-hover:items-center group-hover:justify-center group-hover:text-center">
+      <h2 className="text-xl font-bold text-white mb-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
         {title}
       </h2>
-      <p className="text-sm text-gray-200">
+      <p className="text-sm text-gray-200 transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
         {description}
       </p>
     </div>
@@ -95,6 +95,11 @@ export default function App() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our selection offers serene beaches, wildlife encounters, invigorating hikes, and family-friendly getaways.
             </p>
+            <p className='text-gray-500 mx-auto font-mono cursor-pointer'>
+                <b>press</b> the <b>image </b> to see more information
+            </p>
+            
+            
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="lg:row-span-2 lg:col-span-1">
@@ -106,15 +111,30 @@ export default function App() {
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {cardsData.slice(1).map((card, index) => (
-              <ImageCardSmall
-                key={index}
-                title={card.title}
-                description={card.description}
-                imageUrl={card.imageUrl}
-                onClick={() => navigate(card.path)}
-              />
-            ))}
+            <ImageCardSmall
+              title={cardsData[1].title}
+              description={cardsData[1].description}
+              imageUrl={cardsData[1].imageUrl}
+              onClick={() => navigate(cardsData[1].path)}
+            />
+            <ImageCardSmall
+              title={cardsData[2].title}
+              description={cardsData[2].description}
+              imageUrl={cardsData[2].imageUrl}
+              onClick={() => navigate(cardsData[2].path)}
+            />
+            <ImageCardSmall
+              title={cardsData[3].title}
+              description={cardsData[3].description}
+              imageUrl={cardsData[3].imageUrl}
+              onClick={() => navigate(cardsData[3].path)}
+            />
+            <ImageCardSmall
+              title={cardsData[4].title}
+              description={cardsData[4].description}
+              imageUrl={cardsData[4].imageUrl}
+              onClick={() => navigate(cardsData[4].path)}
+            />
           </div>
         </div>
       </div>

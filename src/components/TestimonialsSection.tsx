@@ -32,7 +32,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-24 bg-gradient-safari">
+    <section className="py-24 bg-gradient-safari rounded-[40px]">
         <div className="text-center mb-16 animate-fade-up">
           <div className="text-center mb-16 animate-fade-up">
             <img

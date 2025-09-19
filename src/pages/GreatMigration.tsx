@@ -51,7 +51,6 @@ const GreatMigration = () => {
     <div className="bg-white text-gray-800 font-sans">
       <Navigation />
       
-      {/* Hero Section */}
       <div 
         className="relative w-full h-[500px] bg-cover bg-center" 
         style={{ backgroundImage: `url('https://yellowzebrasafaris.com/media/28594/greatmigration.jpg?rxy=0.49833333333333335%2C0.18045112781954886&width=2048&height=1024&format=jpg&v=1da5e0f44519a90')` }}
@@ -71,7 +70,6 @@ const GreatMigration = () => {
         </div>
       </div>
       
-      {/* Article Section */}
       <div className="container mx-auto p-8 lg:p-16 max-w-4xl">
         <article className="prose lg:prose-xl mx-auto text-gray-700">
           <p className="text-lg md:text-xl leading-relaxed mb-8">
@@ -87,7 +85,6 @@ const GreatMigration = () => {
               <li key={phase.id}>
                 <Card className="bg-gray-100 p-6 rounded-lg shadow-sm">
                   <div className={`flex flex-col md:flex-row items-center gap-6 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-                    {/* Image */}
                     <div className="md:w-1/2 w-full h-48 md:h-auto overflow-hidden rounded-lg shadow-md">
                       <img 
                         src={phase.image} 
@@ -95,7 +92,6 @@ const GreatMigration = () => {
                         className="w-full h-full object-cover" 
                       />
                     </div>
-                    {/* Content */}
                     <div className="md:w-1/2 w-full">
                       <h3 className="text-xl font-semibold mb-2 text-gray-800">{phase.name}</h3>
                       <p className="text-sm font-medium text-gray-600 mb-2">
@@ -112,7 +108,6 @@ const GreatMigration = () => {
           </ul>
         </article>
 
-        {/* Buttons */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-16">
           <Button
             onClick={() => navigate('/')}

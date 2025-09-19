@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
 import bothImage from '@/assets/both.png'; 
 import iconImage from '@/assets/icon.png';
+import planingImage from '@/assets/planing.png'
 
 export function NewsletterSection() {
   const [email, setEmail] = useState('');
@@ -26,8 +27,12 @@ export function NewsletterSection() {
 
   return (
     <>
-      <section className="bg-white py-16 ">
+      <section className="bg-white py-16 rounded-[40px]">
         <div className="max-w-5xl mx-auto flex flex-col items-center">
+           <img
+            src={planingImage}
+						alt="African Wildlife Icon"
+						className="mx-auto mb-4 w-20 h-20 object-contain"/>
           <h1 className="text-3xl md:text-4xl font-serif font-semibold text-gray-900 mb-6 text-center">
             Start Planning <span className="italic font-normal">your</span> adventure
           </h1>
@@ -62,7 +67,7 @@ export function NewsletterSection() {
         </div>
       </section>
 
-      <section className="py-24 bg-white ">
+      <section className="py-24 bg-white rounded-[40px] ">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center px-4 md:px-0">
           <div className="hidden md:flex flex-col items-center justify-center w-1/2 pr-8">
             <img

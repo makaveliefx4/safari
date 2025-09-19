@@ -30,7 +30,6 @@ export function Expert() {
       const maxMove = window.innerWidth - 60;
       setScrollX(scrollPercent * maxMove);
 
-      // A simple way to sync animation frames with scroll
       const scrollThresholdForFrameChange = 50; 
       const frameIndex = Math.floor(scrollTop / scrollThresholdForFrameChange) % pawAnimationFrames.length;
       setCurrentPawFrame(frameIndex);
@@ -42,15 +41,13 @@ export function Expert() {
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden rounded-3xl">
-      {/* Background Image with Overlay */}
-      <div
+=      <div
         className="absolute inset-0 bg-cover bg-center bg-fixed rounded-3xl"
         style={{ backgroundImage: `url(${sunsetImage})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
       </div>
 
-      {/* Lion Paw Animation */}
       <img
         src={pawAnimationFrames[currentPawFrame]}
         alt="lion paw walking"
@@ -65,7 +62,6 @@ export function Expert() {
         }}
       />
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-8 text-white h-full">
         <div className="animate-fade-up flex flex-col items-center justify-center max-w-lg">
           <p className="text-lg md:text-2xl font-serif tracking-widest text-white/90 mb-4 leading-tight">

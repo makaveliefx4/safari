@@ -36,7 +36,6 @@ const TanzaniaFamilySafari = () => {
     <div className="min-h-screen bg-gray-50 text-gray-800 font-sans">
       <Navigation />
 
-      {/* Hero Section */}
       <div
         className="relative h-[60vh] bg-cover bg-center flex items-center justify-center text-center p-6"
         style={{ backgroundImage: `url('https://kilimanjarofairdeal.com/wp-content/uploads/2023/12/family-3.jpg')` }}
@@ -78,7 +77,6 @@ const TanzaniaFamilySafari = () => {
                       />
                     </div>
 
-                    {/* Content */}
                     <div className="flex-1 lg:w-1/2">
                       <h3 className="text-3xl font-bold mb-4 text-gray-900 leading-tight">
                         {activity.name}
@@ -97,7 +95,6 @@ const TanzaniaFamilySafari = () => {
           </ul>
         </article>
 
-        {/* Buttons */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-16">
           <Button
             onClick={() => navigate('/')}

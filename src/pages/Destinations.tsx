@@ -18,7 +18,7 @@ const destinations = [
     id: 2,
     name: 'Tarangire',
     location: 'Northern Tanzania',
-    image: "https://www.safaris-uganda.com/wp-content/uploads/2020/03/tarangire-national-park-1.jpg", 
+    image: "https://www.exploretanzaniatours.com/wp-content/uploads/2020/09/Trangire-national-park.jpg", 
     description: 'Famous for its baobabs and massive elephant herds, Tarangire is the fourth and final park on Tanzania’s renowned northern safari circuit. The northern part of Tarangire is dominated by the perennial Tarangire River, which attracts colossal herds of elephants during the dry season (June to October). The lesser-visited south is home to a series of vast swamps and wetlands that support a wide variety of wild animals.',
   },
   {
@@ -72,7 +72,6 @@ export default function Destinations() {
       </section>
 
 
-      {/* Destinations Details */}
       <section className="py-16 rounded-[80px]">
         <div className="max-w-7xl mx-auto px-6 font-serif">
           <div className="space-y-16">

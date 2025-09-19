@@ -51,10 +51,8 @@ export default function BeachesPage() {
     <div className="min-h-screen bg-gradient-to-b from-sky-100 via-white to-emerald-50 rounded-[60px]">
       <Navigation />
       
-      {/* Hero Section */}
       <section className="relative pt-24 pb-16 bg-[url('https://tanzania-specialist.com/wp-content/uploads/2023/07/zanzibar_island_boat-1920x800.jpg')] bg-cover bg-center rounded-b-[60px]">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent"></div>
-
         <div className="relative max-w-6xl mx-auto px-6 text-center text-white animate-fade-up">
           <img
             src={beachessImage}
@@ -69,8 +67,6 @@ export default function BeachesPage() {
           </p>
         </div>
       </section>
-
-      {/* Beaches List */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 font-sans space-y-20">
           {Beaches.map((beach, index) => (
@@ -81,7 +77,6 @@ export default function BeachesPage() {
               <div className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ${
                 index % 2 !== 0 ? 'lg:grid-flow-col-dense' : ''}`}>
                 
-                {/* Text */}
                 <div className={`${index % 2 !== 0 ? 'order-1 lg:order-2' : ''}`}>
                   <CardContent className="p-6">
                     <h2 className="text-3xl font-bold text-emerald-700 mb-4">
@@ -96,7 +91,6 @@ export default function BeachesPage() {
                   </CardContent>
                 </div>
 
-                {/* Image */}
                 <div className="relative overflow-hidden rounded-[40px] shadow-lg">
                   <img 
                     src={beach.image} 
@@ -108,7 +102,6 @@ export default function BeachesPage() {
             </Card>
           ))}
 
-          {/* Buttons */}
           <div className="flex flex-col items-center gap-6 mt-12 animate-fade-in-out">
             <Button
               variant="safari-outline"

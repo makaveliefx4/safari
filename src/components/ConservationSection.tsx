@@ -38,7 +38,7 @@ const partners = [
 export function ConservationSection() {
 	const navigate = useNavigate();
 	return (
-		<section className="w-full bg-white py-20">
+	<section className="w-full bg-white py-20 rounded-[40px]">
 		   <div className="max-w-7xl mx-auto px-6 animate-fade-in-out">
             <img
 			src={bzImage}
@@ -148,6 +148,6 @@ export function ConservationSection() {
 		  </a>
             </div>
 		 </div>
-	   </section>
+	</section>
 	);
 }
