@@ -16,7 +16,8 @@ import moneyImage from "@/assets/money.png";
 import formImage from "@/assets/form.png";
 import { db } from "../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
-import iconImage from '@/assets/icon.png';
+import ivoImage from '@/assets/ivo.png';
+import iconImage from '@/assets/icon.png'
 
 const MessageModal = ({ isOpen, onClose, formData }) => {
   if (!isOpen) return null;
@@ -149,7 +150,7 @@ export function Contact() {
          
             <div className="flex justify-center mb-6 -mt-20">
               <img
-                src={iconImage}
+                src={ivoImage}
                 alt="Eagle Icon"
                 className="h-24 w-24 object-contain drop-shadow-lg filter invert"/>
             </div>
@@ -486,6 +487,24 @@ export function Contact() {
           </div>
           
         </section>
+
+        <section className="bg-white py-16">
+        <div className="flex justify-center mb-6 -mt-20">
+          <img
+            src={ivoImage}
+            alt="Eagle Icon"
+            className="h-24 w-24 object-contain drop-shadow-lg filter"
+          />
+        </div>
+
+        <div className="flex justify-center mb-8">
+          <span className="text-xl font-bold tracking-widest text-muted-foreground">
+            . . . . . . .
+          </span>
+        </div>
+        
+      </section>
+
         
       </div>
       

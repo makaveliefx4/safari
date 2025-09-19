@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight, Mail, Play, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import trueImage from '@/assets/true.jpg';
-import iconImage from '@/assets/icon.png';
+import ivoImage from '@/assets/ivo.png';
 
 export function HeroSection() {
   return (
@@ -17,7 +17,7 @@ export function HeroSection() {
         <div className="animate-fade-up">
             <div className="flex justify-center mb-6 -mt-20">
             <img
-              src={iconImage}
+              src={ivoImage}
               alt="Eagle Icon"
               className="h-24 w-24 object-contain drop-shadow-lg filter invert"/>
             </div>

@@ -4,7 +4,7 @@ import { X, Compass, MapPin, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import './Navigation.css';
-import iconImage from '@/assets/icon.png';
+import ivoImage from '@/assets/ivo.png';
 
 const navItems = [
   { to: '/', label: 'Home', icon: Compass },
@@ -115,7 +115,7 @@ export function Navigation() {
         <div className="flex flex-col flex-1 overflow-y-auto p-6 space-y-8">
           <div className="flex flex-col items-center text-center">
             <img
-              src={iconImage}
+              src={ivoImage}
               alt="African Wildlife Icon"
               className="mb-2 w-16 h-16 sm:w-20 sm:h-20 object-contain"
             />
