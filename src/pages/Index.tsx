@@ -12,6 +12,7 @@ import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { ConservationSection } from '@/components/ConservationSection';
 import { Expert } from '@/components/Expert'
 import { Know, } from '@/components/toknow';
+import  Wild  from '@/components/Wild'
 import { NewsletterSection } from '@/components/NewsletterSection';
 
 const Index = () => {
@@ -34,6 +35,7 @@ const Index = () => {
         <ConservationSection />
         <Expert />
         <Know />
+        <Wild />
         <NewsletterSection />
       </main>
 
