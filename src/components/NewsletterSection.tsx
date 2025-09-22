@@ -6,6 +6,7 @@ import { useToast } from '@/components/ui/use-toast';
 import bothImage from '@/assets/both.png'; 
 import iconImage from '@/assets/icon.png';
 import planingImage from '@/assets/planing.png'
+import { Link } from 'react-router-dom';
 
 export function NewsletterSection() {
   const [email, setEmail] = useState('');
@@ -36,8 +37,15 @@ export function NewsletterSection() {
           <h1 className="text-3xl md:text-4xl font-serif font-semibold text-gray-900 mb-6 text-center">
             Start Planning <span className="italic font-normal">your</span> adventure
           </h1>
+            <span className="text-xl tracking-widest text-muted-foreground mb-5">. . . . . . .</span>
+            <Link to="/contact">
+           <Button variant="safari-outline" size="lg" className=" border-muted-foregrounde hover:border-emerald-600 text-muted-foreground px-8 py-6 rounded-full shadow-lg duration-500 ease-in-out">
+             <Mail className="font-semibold" />
+             <span>REQUEST A QUOTE</span>
+            </Button>
+            </Link>
+            
          <div className="mb-8">
-            <span className="text-xl tracking-widest text-muted-foreground">. . . . . . .</span>
           </div>
           <div className="w-full flex flex-col md:flex-row justify-between items-start gap-10">
             <div className="flex-1 flex flex-col items-center text-center">

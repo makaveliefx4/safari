@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
 import { useToast } from '@/components/ui/use-toast';
 import bzImage from '@/assets/bz.png';
-import aboutImage from '@/assets/about.png';
+import ContactImage from '@/assets/contact.jpg';
 import whatImage from '@/assets/what.png';
 import bothImage from '@/assets/both.png';
 import moneyImage from "@/assets/money.png";
@@ -18,7 +18,10 @@ import { db } from "../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import ivoImage from '@/assets/ivo.png';
 import iconImage from '@/assets/icon.png'
-
+import tanzaniaImage from '@/assets/tanzania.png'
+import girafeImage from '@/assets/girafe.jpg'
+import lionImage from '@/assets/lion.jpg'
+import phoneImage from '@/assets/phone.png'
 const MessageModal = ({ isOpen, onClose, formData }) => {
   if (!isOpen) return null;
 
@@ -141,7 +144,7 @@ export function Contact() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${aboutImage})` }}>
+          style={{ backgroundImage: `url(${ContactImage})` }}>
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
         
@@ -174,7 +177,7 @@ export function Contact() {
       <div className="max-w-4xl mx-auto px-6 py-16">      
         <div className="animate-fade-up">
            <img
-             src={formImage}
+             src={phoneImage}
              alt="contact form"
              className="mx-auto mb-4 w-20 h-20 object-contain"/>
            <div className="text-center mb-16 animate-fade-up">
@@ -446,8 +449,84 @@ export function Contact() {
                 style={{ zIndex: 0 }}/>
             </div>
           </div>
-        </section>
-        
+         </section>
+         
+        <section className="py-20">
+       <div style={{ textAlign: "center" }}>
+         <img
+           src={tanzaniaImage}
+           alt="TZ"
+           className="mx-auto mb-4 w-20 h-20 object-contain"
+         />
+         <p className="text-lg font-semibold uppercase text-muted-foreground tracking-widest mb-2">
+           About the Adventure
+         </p>
+         <div className="mb-8">
+           <span className="text-xl tracking-widest text-muted-foreground">
+             . . . . . . .
+           </span>
+         </div>
+         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-20">
+           Know Tanzania With us
+         </h2>
+       </div>
+     
+       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center px-6 animate-fade-in-out">
+         <div className="relative w-full h-[500px] rounded-[20px] overflow-hidden order-1 lg:order-1 mx-auto">
+           <img
+             src={lionImage}
+             alt="Local"
+             className="absolute inset-0 w-full h-full object-cover"
+           />
+         </div>
+     
+         <div className="flex flex-col space-y-6 order-2 lg:order-2">
+           <div>
+             <p className="text-lg font-semibold uppercase tracking-widest text-gray-600 text-center">
+               Adventure
+             </p>
+             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 text-center">
+               Experiences
+             </h2>
+           </div>
+           <p className="text-gray-700 text-lg leading-relaxed text-center">
+             Traveling with us is the most majestic experience that you will feel,
+             travelling from different places and seeing the most amazing sights in
+             Tanzania. See the Big Five in nature and discover the habits of wild
+             animals.
+           </p>
+         </div>
+       </div>
+     
+   <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center px-6 animate-fade-in-out mt-16">
+     <div className="relative w-full h-[500px] rounded-[20px] overflow-hidden order-1 lg:order-2">
+       <img
+         src={girafeImage}
+         alt="Local"
+         className="absolute inset-0 w-full h-full object-cover"
+       />
+     </div>
+ 
+     <div className="flex flex-col space-y-6 order-2 lg:order-1">
+       <div>
+         <p className="text-lg font-semibold uppercase tracking-widest text-gray-600 text-center">
+           Excellence &
+         </p>
+         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 text-center">
+           Authenticity
+         </h2>
+       </div>
+       <p className="text-gray-700 text-lg leading-relaxed text-center">
+         We believe in the power of authentic, well-guided experiences that bring
+         Africa’s breathtaking landscapes and wildlife to life. Our team is
+         passionate about showcasing the rich culture and natural beauty of the
+         regions we explore, ensuring that each journey feels personal and
+         meaningful.
+       </p>
+     </div>
+   </div>
+ </section>
+ 
         
         <section className="bg-white py-16">
           <div className="max-w-5xl mx-auto flex flex-col items-center">

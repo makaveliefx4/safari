@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Mail, Play, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import trueImage from '@/assets/true.jpg';
+import jaImage from '@/assets/ja.jpg';
 import ivoImage from '@/assets/ivo.png';
 import TripaImage from '@/assets/Tripa.png'
 
@@ -9,8 +9,8 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <div
-          className="absolute inset-0 bg-cover bg-center sm:bg-center md:bg-top bg-no-repeat"
-          style={{ backgroundImage: `url(${trueImage})` }}>
+          className="absolute inset-0 bg-cover bg-center sm:bg-center md:bg-top bg-fixed"
+          style={{ backgroundImage: `url(${jaImage})` }}>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
         </div>
       
@@ -31,13 +31,13 @@ export function HeroSection() {
               className=" h-45 w-45 object-contain invert"/>
           </div>
         
-          <p className="text-xl md:text-2xl text-center font-serif  text-white/90 mb-5 max-w-3xl mx-auto leading-tight">
+          <p className="text-xl md:text-2xl text-center font-serif  text-white mb-3 max-w-3xl mx-auto leading-tight">
             In the Heart of the Wilderness.
           </p>
-          <h1 className="text-3xl md:text-3xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-3xl lg:text-6xl font-bold text-white mb-3 leading-tight">
             Discover The Untamed.
           </h1>
-           <p className="text-xl  text-center font-serif md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-tight">
+           <p className="text-xl  text-center font-serif md:text-2xl text-white mb-12 max-w-3xl mx-auto leading-tight">
             Expect the unexpected.
           </p>
 

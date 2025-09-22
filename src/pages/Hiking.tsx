@@ -25,7 +25,7 @@ const hiking = [
     id: 3,
     name: 'Ngorongoro Highlands',
     location: 'Ngorongoro Conservation Area',
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIG9gxPp-d-S4EKjKSL50VXlDFyQsx71xChg&s",
+    image: "https://tanzaniaglimpseexpeditions.com/wp-content/uploads/2024/12/lisa-stockton-6bnNiZYIv6c-unsplash.jpg",
     description: "This area offers a different kind of trekking experience, blending wildlife viewing with cultural encounters. You can hike through volcanic craters like Empakaai, past remote Maasai villages, and see the unique geological features of the region.",
   },
   {

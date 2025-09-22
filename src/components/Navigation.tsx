@@ -15,9 +15,9 @@ const navItems = [
     icon: Compass, 
     isDropdown: true,
     subItems: [
-      { to: '/big-five', Label: 'Big Five'},
       { to: '/hiking', label: 'Hiking' },
       { to: '/great-migration', label: 'Great Migration' },
+      { to: '/big-five', label: 'Big Five'},
       { to: '/friendly', label: 'Child Friendly' },
       { to: '/beaches', label: 'Beaches'},
     ],
@@ -147,7 +147,7 @@ export function Navigation() {
                       onClick={() => setIsExperiencesOpen(!isExperiencesOpen)}
                     >
                       {Icon && <Icon className="h-5 w-5 shrink-0" />}
-                      <span className="font-medium truncate">{item.label}</span>
+                      <span className="font-medium truncate" style={{color:"black"}}>{item.label}</span>
                       <ChevronDown
                         className={cn(
                           "h-4 w-4 ml-auto transition-transform duration-300",
@@ -176,7 +176,7 @@ export function Navigation() {
                                 )
                               }
                             >
-                              <span className="font-medium truncate">{subItem.label}</span>
+                              <span className="font-medium truncate" style={{color:"black"}}>{subItem.label}</span>
                             </NavLink>
                           ))}
                         </div>
@@ -200,7 +200,7 @@ export function Navigation() {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <Icon className="h-5 w-5 shrink-0" />
-                  <span className="font-medium truncate">{item.label}</span>
+                  <span className="font-medium truncate" style={{color:"black"}}>{item.label}</span>
                 </NavLink>
               );
             })}

@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
+import safImage from '@/assets/saf.jpg'
 
 export function DestinationsSection() {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ export function DestinationsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-up lg:col-span-2">
                 <div className="relative">
-                  <img src="https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F3e8b018b-5d20-43fc-83d3-885564568140.jpg?crop=6048%2C4032%2C0%2C0&resize=618" 
+                  <img src={safImage}
                       alt="Serengeti National Park" 
                       className="w-full h-[400px] object-cover rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" />
                 </div>

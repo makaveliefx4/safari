@@ -8,11 +8,13 @@ import { ActivitiesSection } from '@/components/ActivitiesSection';
 import { WildlifeSection } from '@/components/WildlifeSection';
 import { PackagesSection } from '@/components/PackagesSection';
 import { StatsSection } from '@/components/StatsSection';
+import { Maasai } from '@/components/Maasai'
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { ConservationSection } from '@/components/ConservationSection';
 import { Expert } from '@/components/Expert'
-import { Know, } from '@/components/toknow';
+import { Know } from '@/components/toknow';
 import  Wild  from '@/components/Wild'
+import { Connect } from '@/components/Connect'
 import { NewsletterSection } from '@/components/NewsletterSection';
 
 const Index = () => {
@@ -31,11 +33,13 @@ const Index = () => {
         <WildlifeSection />
         <PackagesSection />
         <StatsSection />
+        <Maasai />
         <TestimonialsSection />
         <ConservationSection />
         <Expert />
         <Know />
         <Wild />
+        <Connect />
         <NewsletterSection />
       </main>
 
