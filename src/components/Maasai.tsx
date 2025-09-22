@@ -24,9 +24,7 @@ export function Maasai() {
         </h2>
       </div>
 
-      {/* First section */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-6 animate-fade-in-out">
-        {/* Image first */}
         <div className="relative w-full h-[500px] lg:h-[800px] rounded-[20px] overflow-hidden order-1 lg:order-1">
           <img
             src="https://oscarafrica.com/wp-content/themes/oscarafrica-child/images/nw-13.jpg"
@@ -35,13 +33,12 @@ export function Maasai() {
           />
         </div>
 
-        {/* Text second */}
         <div className="flex flex-col space-y-6 order-2 lg:order-2">
           <div>
-            <p className="text-lg font-semibold uppercase tracking-widest text-gray-600">
+            <p className="text-lg font-semibold uppercase tracking-widest text-gray-600" style={{textAlign: 'center'}}>
               Culture
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2" style={{textAlign: 'center'}}>
               Experiences
             </h2>
           </div>
@@ -65,9 +62,7 @@ export function Maasai() {
         </div>
       </div>
 
-      {/* Second section */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-6 animate-fade-in-out mt-16">
-        {/* Image first on mobile, second on desktop */}
         <div className="relative w-full h-[400px] lg:h-[600px] rounded-[20px] overflow-hidden order-1 lg:order-2">
           <img
             src="https://wrongturnagain.com/wp-content/uploads/2023/12/hadza_DSF8945-scaled.jpg"
@@ -76,13 +71,12 @@ export function Maasai() {
           />
         </div>
 
-        {/* Text second on mobile, first on desktop */}
         <div className="flex flex-col space-y-6 order-2 lg:order-1">
           <div>
-            <p className="text-lg font-semibold uppercase tracking-widest text-gray-600">
+            <p className="text-lg font-semibold uppercase tracking-widest text-gray-600" style={{textAlign: 'center'}}>
               Popular
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2" style={{textAlign: 'center'}}>
               Experiences
             </h2>
           </div>
