@@ -80,16 +80,16 @@ const Index = () => {
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm sm:text-base text-green/90">
                 <li>+255 698 809 207</li>
-                <li>hello@safariluxury.com</li>
+                <li>hsafariluxury@.com</li>
                 <li>Arusha, Tanzania</li>
-                <li>Mon-Sat 8AM-6PM EAT</li>
+                <li>Mon-Frd 8AM-6PM EAT</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-primary-foreground/20 pt-8 text-center text-xs sm:text-sm text-primary-foreground/60">
             <p>
-              &copy; 2025 Safari Luxury. All rights reserved. • Conservation & Community Partners
+              &copy; 2025 Safari Luxury. All rights reserved. •
             </p>
           </div>
         </div>

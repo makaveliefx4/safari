@@ -351,7 +351,7 @@ export function Contact() {
           </div>
         </section>
 
-        <section className="w-full bg-white py-20">
+        <section className="w-full bg-white py-20 rounded-[40px]">
           <div className="max-w-7xl mx-auto px-6 animate-fade-in-out">
             <div className="text-center mb-16 animate-fade-up">
               <img
@@ -528,7 +528,7 @@ export function Contact() {
  </section>
  
         
-        <section className="bg-white py-16">
+        <section className="bg-white py-16 rounded-[50px]">
           <div className="max-w-5xl mx-auto flex flex-col items-center">
             <h1 className="text-3xl md:text-4xl font-serif font-semibold text-gray-900 mb-6 text-center">
               Start Planning <span className="italic font-normal">your</span> adventure

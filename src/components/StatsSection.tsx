@@ -98,7 +98,7 @@ export function StatsSection() {
 					<h3 className="text-2xl font-bold text-foreground mb-8 animate-fade-up">
 						Awards & Recognition
 					</h3>
-          <span className="text-xl tracking-widest text-muted-foreground -mt-5 block">
+          <span className="text-xl tracking-widest text-muted-foreground -mt-10 block">
             . . . . . . .
           </span>
 					<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">

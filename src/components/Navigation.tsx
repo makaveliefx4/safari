@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { X, Compass, MapPin, Phone, ChevronDown, HomeIcon } from 'lucide-react';
+import { X, Compass, MapPin, Phone, ChevronDown, HomeIcon, BadgeDollarSignIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import './Navigation.css';
 import ivoImage from '@/assets/ivo.png';
-import { Label } from 'recharts';
 
 const navItems = [
   { to: '/', label: 'Home', icon: HomeIcon },
@@ -22,12 +21,23 @@ const navItems = [
       { to: '/beaches', label: 'Beaches'},
     ],
   },
+  {
+    label: 'Holiday Style',
+    icon: BadgeDollarSignIcon,
+    isDropdown: true,
+    subItems: [
+      {to:'/couple', label: 'Couple'},
+      {to:'/culture', label: 'Culture'},
+      {to:'/families', label: 'Families'},
+      {to:'/wild-life', label: "Wildlife"},
+    ],
+  },
   { to: '/Contact', label: 'Contact', icon: Phone },
 ];
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isExperiencesOpen, setIsExperiencesOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -61,6 +71,7 @@ export function Navigation() {
 
   useEffect(() => {
     setIsOpen(false);
+    setOpenDropdown(null);
   }, [location]);
 
   useEffect(() => {
@@ -73,8 +84,13 @@ export function Navigation() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const toggleDropdown = (label) => {
+    setOpenDropdown(openDropdown === label ? null : label);
+  };
+
   return (
     <>
+     
       {!isOpen && (
         <div
           className={cn(
@@ -137,6 +153,7 @@ export function Navigation() {
             {navItems.map((item, index) => {
               const Icon = item.icon;
               if (item.isDropdown) {
+                const isOpen = openDropdown === item.label;
                 return (
                   <div key={item.label}>
                     <button
@@ -144,21 +161,21 @@ export function Navigation() {
                         'flex items-center gap-3 p-3 rounded-lg w-full text-left transition-all duration-300 group',
                         'text-foreground hover:bg-white/20 hover:backdrop-blur-sm hover:text-accent-foreground'
                       )}
-                      onClick={() => setIsExperiencesOpen(!isExperiencesOpen)}
+                      onClick={() => toggleDropdown(item.label)}
                     >
                       {Icon && <Icon className="h-5 w-5 shrink-0" />}
                       <span className="font-medium truncate" style={{color:"black"}}>{item.label}</span>
                       <ChevronDown
                         className={cn(
                           "h-4 w-4 ml-auto transition-transform duration-300",
-                          isExperiencesOpen ? "rotate-180" : ""
+                          isOpen ? "rotate-180" : ""
                         )}
                       />
                     </button>
                     <div
                       className={cn(
                         "grid transition-all duration-300 ease-in-out overflow-hidden",
-                        isExperiencesOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                        isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                       )}
                     >
                       <div className="overflow-hidden">

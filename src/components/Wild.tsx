@@ -43,7 +43,7 @@ const ImageCard = ({ title, description, imageUrl, onClick }) => (
     <img
       src={imageUrl}
       alt={title}
-      className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+      className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-300"
     />
     <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-start justify-end p-4 text-left transition-all duration-300 ease-in-out group-hover:bg-opacity-50 group-hover:items-center group-hover:justify-center group-hover:text-center">
       <h2 className="text-2xl font-bold text-white mb-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
@@ -84,10 +84,10 @@ export default function App() {
     <div className="flex justify-center p-4 min-h-screen">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center my-12">
-             <img
-		   	src={opImage}
-		   	alt="African Wildlife Icon"
-		   	className="mx-auto mb-4 w-20 h-20 object-contain"/>
+        <img
+		   	  src={opImage}
+		   	  alt="African Wildlife Icon"
+		   	  className="mx-auto mb-4 w-20 h-20 object-contain"/>
             <h1 className="text-4xl font-bold mb-4">Explore handpicked experiences</h1>
             <div className="mb-8">
             <span className="text-xl tracking-widest text-muted-foreground">. . . . . . .</span>
@@ -98,8 +98,7 @@ export default function App() {
             <p className='text-gray-500 mx-auto font-mono cursor-pointer'>
                 <b>press</b> the <b>image </b> to see more information
             </p>
-            
-            
+
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="lg:row-span-2 lg:col-span-1">
