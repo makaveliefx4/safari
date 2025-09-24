@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight, Mail, Play, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import jaImage from '@/assets/ja.jpg';
-import ivoImage from '@/assets/ivo.png';
+import carImage from '@/assets/car.png';
 import TripaImage from '@/assets/Tripa.png'
 
 export function HeroSection() {
@@ -18,9 +18,9 @@ export function HeroSection() {
         <div className="animate-fade-up">
             <div className="flex justify-center mb-6 -mt-20">
             <img
-              src={ivoImage}
+              src={carImage}
               alt="Eagle Icon"
-              className="h-24 w-24 object-contain drop-shadow-lg filter invert"/>
+              className="h-[150px] w-[150px] object-contain drop-shadow-lg"/>
             </div>
           <div className="flex justify-center mb-6 -mt-15 ">
             <img

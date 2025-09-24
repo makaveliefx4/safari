@@ -22,6 +22,7 @@ import tanzaniaImage from '@/assets/tanzania.png'
 import girafeImage from '@/assets/girafe.jpg'
 import lionImage from '@/assets/lion.jpg'
 import phoneImage from '@/assets/phone.png'
+import carImage from '@/assets/car.png'
 const MessageModal = ({ isOpen, onClose, formData }) => {
   if (!isOpen) return null;
 
@@ -510,7 +511,8 @@ export function Contact() {
      <div className="flex flex-col space-y-6 order-2 lg:order-1">
        <div>
          <p className="text-lg font-semibold uppercase tracking-widest text-gray-600 text-center">
-           Excellence &
+           Excellence 
+           <p className='text-3xl font-semibold text-muted-foreground font-serif'> &</p>
          </p>
          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 text-center">
            Authenticity
@@ -563,25 +565,23 @@ export function Contact() {
                 </p>
               </div>
             </div>
+            
           </div>
+          
           
         </section>
 
-        <section className="bg-white py-16">
-        <div className="flex justify-center mb-6 -mt-20">
+        <section className="bg-white py-10 rounded-[20px]">
+           <div className="flex justify-center mb-6 -mt-20">
           <img
-            src={ivoImage}
+            src={carImage}
             alt="Eagle Icon"
-            className="h-24 w-24 object-contain drop-shadow-lg filter"
+            className="h-[200px] w-[200px] object-contain drop-shadow-lg filter"
           />
-        </div>
-
-        <div className="flex justify-center mb-8">
-          <span className="text-xl font-bold tracking-widest text-muted-foreground">
-            . . . . . . .
-          </span>
-        </div>     
-      </section>       
+        </div> 
+      </section>    
+      <section className='bg-white py-12 '>
+        </section>   
       </div>
       <MessageModal
         isOpen={isModalOpen}

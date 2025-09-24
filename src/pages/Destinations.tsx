@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
 import desImage from '@/assets/des.png';
+import carImage from '@/assets/car.png'
 
 const destinations = [
   {
@@ -39,6 +40,12 @@ const destinations = [
     name: "hadzabe Culture",
     image: "https://dustywheels-travel.com/wp-content/uploads/2020/04/Hadzabe-Feature-Imgae-1-of-1.jpg",
     description: "The hadzabe are a hunter-gatherer community living in the Lake Eyasi region of Tanzania. They are known for their unique click language and their deep knowledge of the local flora and fauna. Visiting the hadzabe offers a rare glimpse into a way of life that has remained largely unchanged for thousands of years.",
+  },
+  {
+    id: 6,
+    name: "Kilimanjaro Trekking",
+    image: "https://57hours.com/wp-content/uploads/2024/06/kilimanjaro-via-machame-trek.jpg",
+    description:"Climb the highest mounten in Africa Mount kilimanjaro and Conquare the highest pick of the mountain. Climbing Mountain kilimajaro Help at physical fitness and health Fitnees, but if you have health (asthma) problem we recommend that to try other destination because mount kilimanjaro has alot of effort and fitness"
   }
 ];
 
@@ -73,7 +80,7 @@ export default function Destinations() {
 
 
       <section className="py-16 rounded-[80px]">
-        <div className="max-w-7xl mx-auto px-6 font-serif">
+        <div className="max-w-7xl mx-auto px-6 font-serif ">
           <div className="space-y-16">
           {destinations.map((destination, index) => (
              <Card 
@@ -92,17 +99,18 @@ export default function Destinations() {
                         {destination.description}
                       </p>
                     </CardContent>
-                  </div>
-
-                  <div className={`relative overflow-hidden rounded-lg shadow-lg`}>
-                    <img 
-                      src={destination.image} 
-                      alt={destination.name}
-                      className="w-full h-auto object-cover rounded-[80px] border-10 border-white"/>
-                  </div>
-                </div>
-              </Card>
-            ))}
+                      </div>
+    
+                      <div className={`relative overflow-hidden rounded-[80px] shadow-lg`}>
+                        <img 
+                          src={destination.image} 
+                          alt={destination.name}
+                          className="w-full h-auto object-cover rounded-[80px] border-10 border-white"/>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              
             <div className="flex justify-center items-center mb-5 animate-fade-in-out">
               <Button
                 variant="safari-outline"
@@ -125,6 +133,15 @@ export default function Destinations() {
           </div>
         </div>
       </section>
+        <section className="bg-white py-10 rounded-[20px]">
+               <div className="flex justify-center mb-6 -mt-20">
+              <img
+                src={carImage}
+                alt="Eagle Icon"
+                className="h-[200px] w-[200px] object-contain drop-shadow-lg filter"
+              />
+            </div> 
+          </section> 
     </div>
   );
 }
