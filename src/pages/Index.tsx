@@ -14,6 +14,8 @@ import { ConservationSection } from '@/components/ConservationSection';
 import { Expert } from '@/components/Expert'
 import { Know } from '@/components/toknow';
 import  Wild  from '@/components/Wild'
+import Site from '@/components/Site'
+import Event from '@/components/Event'
 import { Connect } from '@/components/Connect'
 import { NewsletterSection } from '@/components/NewsletterSection';
 
@@ -40,6 +42,8 @@ const Index = () => {
         <Know />
         <Wild />
         <Connect />
+        <Site/>
+        <Event/>
         <NewsletterSection />
       </main>
 

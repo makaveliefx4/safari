@@ -174,7 +174,7 @@ export function PackagesSection() {
                     {pkg.includes.slice(0, 4).map((item) => (
                       <div key={item} className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-accent mr-3 flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm">{item}</span>
+                        <span className="text-muted-foreground font-serif text-sm">{item}</span>
                       </div>
                     ))}
                     {pkg.includes.length > 4 && (

@@ -56,7 +56,7 @@ export function SafariExperiencesSection() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-foreground">{point.title}</h3>
-                <p className="font-semibold text-muted-foreground mb-2">{point.subtitle}</p>
+                <p className="font-semibold text-muted-foreground font-serif mb-2">{point.subtitle}</p>
                 <p className="text-muted-foreground font-serif leading-relaxed">{point.description}</p>
               </div>
             </div>

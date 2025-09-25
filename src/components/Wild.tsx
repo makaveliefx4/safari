@@ -49,7 +49,7 @@ const ImageCard = ({ title, description, imageUrl, onClick }) => (
       <h2 className="text-2xl font-bold text-white mb-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
         {title}
       </h2>
-      <p className="text-md text-gray-200 transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
+      <p className="text-md text-gray-200 font-serif transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
         {description}
       </p>
     </div>
@@ -67,10 +67,10 @@ const ImageCardSmall = ({ title, description, imageUrl, onClick }) => (
       className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
     />
     <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-start justify-end p-4 text-left transition-all duration-300 ease-in-out group-hover:bg-opacity-50 group-hover:items-center group-hover:justify-center group-hover:text-center">
-      <h2 className="text-xl font-bold text-white mb-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
+      <h2 className="text-xl font-bold font-serif text-white mb-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
         {title}
       </h2>
-      <p className="text-sm text-gray-200 transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
+      <p className="text-sm text-gray-200  font-serif transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
         {description}
       </p>
     </div>

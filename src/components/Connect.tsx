@@ -14,7 +14,10 @@ export function Connect() {
                 <p className="text-sm font-light uppercase tracking-widest mb-2 text-gray-700">
                     HOW TO BOOK YOUR
                 </p>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                <div className="mb-6">
+                <span className="text-xl tracking-widest text-muted-foreground">. . . . . . .</span>
+          </div>
+                <h2 className="text-4xl md:text-5xl font-bold ">
                     Dream Africa Holiday
                 </h2>
             </div>
@@ -23,21 +26,21 @@ export function Connect() {
                 <div className="flex flex-col items-center text-center">
                     <span className="text-8xl font-bold text-gray-300 mb-4">1</span>
                     <h3 className="text-2xl font-bold mb-2">Connect With us</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-muted-foreground font-serif leading-relaxed">
                         Share your wish list and we'll start planning your adventure.
                     </p>
                 </div>
                 <div className="flex flex-col items-center text-center">
                     <span className="text-8xl font-bold text-gray-300 mb-4">2</span>
                     <h3 className="text-2xl font-bold mb-2">Customise</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-muted-foreground font-serif leading-relaxed">
                         Your dedicated travel expert will be in touch within 24 hours to start designing your bespoke African itinerary.
                     </p>
                 </div>
                 <div className="flex flex-col items-center text-center">
                     <span className="text-8xl font-bold text-gray-300 mb-4">3</span>
                     <h3 className="text-2xl font-bold mb-2">Confirm & Travel</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-muted-foreground font-serif leading-relaxed">
                         We won't stop refining your plans untill we get the perfect trip at the best price.
                     </p>
                 </div>

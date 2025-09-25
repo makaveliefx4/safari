@@ -8,10 +8,10 @@ export function Maasai() {
       <div style={{ textAlign: 'center' }}>
         <img
           src={MaasaiImage}
-          alt="Culture"
+          alt="Culture Maasai"
           className="mx-auto mb-4 w-20 h-20 object-contain"
         />
-        <p className="text-lg font-semibold uppercase text-muted-foreground tracking-widest mb-2">
+        <p className="text-lg font-semibold font-serif uppercase text-muted-foreground tracking-widest mb-2">
           Learn From Locals
         </p>
         <div className="mb-8">
@@ -35,26 +35,25 @@ export function Maasai() {
 
         <div className="flex flex-col space-y-6 order-2 lg:order-2">
           <div>
-            <p className="text-lg font-semibold uppercase tracking-widest text-gray-600" style={{textAlign: 'center'}}>
+            <p className="text-lg font-semibold uppercase font-serif tracking-widest text-muted-foreground" style={{textAlign: 'center'}}>
               Culture
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2" style={{textAlign: 'center'}}>
+            <h2 className="text-3xl md:text-4xl font-bold  mt-2" style={{textAlign: 'center'}}>
               Experiences
             </h2>
           </div>
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-muted-foreground font-serif text-lg leading-relaxed">
             The spirit and heartbeat of any place lies in its people. We'll
             introduce you to local families and cultural specialists to hear
             their stories, savor their cooking, and gain a deep understanding of
-            Africa.
+            Africa. 
           </p>
 
           <div style={{ textAlign: 'center' }}>
             <a href="tel:+255698809207">
               <Button
                 variant="safari"
-                className="text-white px-6 py-3 rounded shadow-md transition"
-              >
+                className="text-white font-serif px-6 py-3 rounded shadow-md transition" >
                 Meet the Locals
               </Button>
             </a>
@@ -73,14 +72,14 @@ export function Maasai() {
 
         <div className="flex flex-col space-y-6 order-2 lg:order-1">
           <div>
-            <p className="text-lg font-semibold uppercase tracking-widest text-gray-600" style={{textAlign: 'center'}}>
+            <p className="text-lg font-semibold uppercase font-serif tracking-widest text-muted-foreground" style={{textAlign: 'center'}}>
               Popular
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2" style={{textAlign: 'center'}}>
+            <h2 className="text-3xl md:text-4xl font-bold  mt-2" style={{textAlign: 'center'}}>
               Experiences
             </h2>
           </div>
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-muted-foreground font-serif text-lg leading-relaxed">
             African culture is incredibly rich and diverse, encompassing the
             customs, traditions, languages, and arts of thousands of distinct
             ethnic groups across the continent. It is not a single, uniform

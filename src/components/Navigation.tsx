@@ -26,10 +26,10 @@ const navItems = [
     icon: BadgeDollarSignIcon,
     isDropdown: true,
     subItems: [
-      {to:'/couple', label: 'Couple'},
-      {to:'/culture', label: 'Culture'},
-      {to:'/families', label: 'Families'},
-      {to:'/wild-life', label: "Wildlife"},
+      {to:'/couple', label: 'Couple Safari'},
+      {to:'/culture', label: 'Culture Adventure'},
+      {to:'/families', label: 'Families Safari'},
+      {to:'/wild-life', label: "Wildlife Adventure"},
     ],
   },
   { to: '/Contact', label: 'Contact', icon: Phone },
@@ -142,7 +142,7 @@ export function Navigation() {
               className="mb-2 w-16 h-16 sm:w-20 sm:h-20 object-contain"
             />
             <p className="text-xs sm:text-sm font-semibold uppercase text-muted-foreground tracking-widest">
-              The unexpected safari
+              The Unexpected Safari
             </p>
             <h2 className="text-xl sm:text-3xl font-bold text-foreground mt-2">
               LUXURY SAFARI

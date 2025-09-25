@@ -51,7 +51,7 @@ export function NewsletterSection() {
             <div className="flex-1 flex flex-col items-center text-center">
               <img src="https://img.icons8.com/ios/50/000000/africa.png" alt="Africa" className="h-12 mb-2" />
               <h3 className="text-xl font-serif font-medium mb-2">We Know Africa</h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-muted-foreground font-serif text-sm">
                 We are an unique, bespoke travel company led by professional guides with over 10 years of experience
               </p>
             </div>
@@ -59,7 +59,7 @@ export function NewsletterSection() {
             <div className="flex-1 flex flex-col items-center text-center ">
               <img src={bothImage} alt="Tree" className="h-12 mb-2" />
               <h3 className="text-xl font-serif font-medium mb-2">Responsible Travel</h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-muted-foreground font-serif text-sm">
                 We are dedicated to assisting communities through thoughtful and respectful tourism.
               </p>
             </div>
@@ -67,7 +67,7 @@ export function NewsletterSection() {
             <div className="flex-1 flex flex-col items-center text-center">
               <img src="https://img.icons8.com/ios/50/000000/giraffe.png" alt="Giraffe" className="h-12 mb-2" />
               <h3 className="text-xl font-serif font-medium mb-2">Unique Encounters</h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-muted-foreground font-serif text-sm">
                 Crafted tailormade safari packages that is around your travel budget and safari requirements
               </p>
             </div>
@@ -86,7 +86,7 @@ export function NewsletterSection() {
             <span className="text-xl font-bold tracking-widest text-muted-foreground">. . . . . . .</span>
           </div>
           <div className="w-full md:w-1/2 bg-white border border-gray-200 rounded-xl shadow-lg p-10 ">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-left">
+            <h2 className="text-2xl md:text-3xl font-bold  mb-2 text-left">
               Inspired to Join the Safari Community?
             </h2>
             <p className="text-gray-600 mb-6 font-mono text-left">

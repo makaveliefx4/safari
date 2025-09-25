@@ -70,7 +70,7 @@ export function AccommodationSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
               {card.subtitle && (
                 <div className="absolute inset-0 flex items-center justify-center p-6 text-center text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <p className="text-sm font-light leading-snug">
+                  <p className="text-sm font-serif font-light leading-snug">
                     {card.subtitle}
                   </p>
                 </div>

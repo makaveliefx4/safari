@@ -18,7 +18,7 @@ const hiking = [
     id: 2,
     name: 'Mount Meru',
     location: 'Arusha National Park',
-    image: "https://lh3.googleusercontent.com/proxy/5Kqs6YvuGghDRQ2ZC9U6l7nW5Z0EsU4061DqA3DGUUfaKBQfQMR7QZlhckXBwOgS1Nyi9_X_jduPxpoLgPd7hgQlKwR_U8gE2BVX6Ht7ZKWQFj0NJEOEPIlPdgyIrXBD5roJBA",
+    image: "https://www.climbkilimanjaroguide.com/wp-content/uploads/2024/04/Kilimanjaro-hike-mt-meru-in-background.jpg",
     description: "Often called Kilimanjaro's little brother, Mount Meru is an active stratovolcano that offers a thrilling 3-4 day climb. The trek takes you through diverse landscapes, with excellent chances to spot wildlife like giraffes, buffalos, and colobus monkeys on the lower slopes.",
   },
   {
@@ -75,7 +75,7 @@ const TanzaniaHikingSafari = () => {
       
       <div className="container mx-auto p-8 lg:p-16 max-w-4xl">
         <article className="prose lg:prose-xl mx-auto text-gray-700">
-          <p className="text-lg md:text-xl leading-relaxed mb-8">
+          <p className="text-lg md:text-xl font-serif leading-relaxed mb-8">
             A hiking safari in Tanzania is a thrilling and immersive experience that allows you to connect with nature on a deeper level. While game drives offer a spectacular view of the wildlife, exploring on foot brings a unique perspective, allowing you to appreciate the small details of the ecosystem—from animal tracks to exotic flora. Tanzania offers a wide variety of trails, from the high-altitude challenges of Mount Kilimanjaro to the gentle, scenic walks in the Ngorongoro Highlands.
           </p>
           
