@@ -31,7 +31,7 @@ export function SafariExperiencesSection() {
   const navigate = useNavigate();
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 bg-white relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
       <div className="max-w-7xl mx-auto px-6 text-center  mb-16 animate-fade-up">
 					<img
 						src={bothImage}

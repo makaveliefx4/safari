@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
 import bothImage from '@/assets/both.png'; 
 import iconImage from '@/assets/icon.png';
-import planingImage from '@/assets/planing.png'
+import planImage from '@/assets/plan.png'
 import { Link } from 'react-router-dom';
 
 export function NewsletterSection() {
@@ -28,13 +28,13 @@ export function NewsletterSection() {
 
   return (
     <>
-      <section className="bg-white py-16 rounded-[40px]">
+      <section className="bg-white py-16 rounded-[40px] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
         <div className="max-w-5xl mx-auto flex flex-col items-center">
            <img
-            src={planingImage}
+            src={planImage}
 						alt="African Wildlife Icon"
 						className="mx-auto mb-4 w-20 h-20 object-contain"/>
-          <h1 className="text-3xl md:text-4xl font-serif font-semibold text-gray-900 mb-6 text-center">
+          <h1 className="text-3xl md:text-4xl font-serif font-semibold mb-6 text-center">
             Start Planning <span className="italic font-normal">your</span> adventure
           </h1>
             <span className="text-xl tracking-widest text-muted-foreground mb-5">. . . . . . .</span>

@@ -4,7 +4,7 @@ import MaasaiImage from '@/assets/Maasai.png';
 
 export function Maasai() {
   return (
-    <section className="py-20">
+    <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
       <div style={{ textAlign: 'center' }}>
         <img
           src={MaasaiImage}

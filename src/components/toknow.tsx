@@ -1,6 +1,6 @@
 import React from 'react';
-import { ChevronDown, Mail } from 'lucide-react';
-import { Accordion,AccordionContent,AccordionItem,AccordionTrigger,} from '@/components/ui/accordion';
+import { Mail } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent } from '@/components/ui/card';
 import anounceImage from '@/assets/anounce.png';
 import { Button } from '@/components/ui/button';
@@ -42,18 +42,19 @@ const know = [
 
 export function Know() {
   return (
-    <section className="py-24 bg-background"> 
-        <div className="max-w-7xl mx-auto px-6 animate-fade-in-out">
+    <section className="py-24 bg-background max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+      <div className="max-w-7xl mx-auto px-6 animate-fade-in-out">
         <img
-						src={anounceImage}
-						alt="African Wildlife Icon"
-						className="mx-auto mb-4 w-20 h-20 object-contain"/>
+          src={anounceImage}
+          alt="African Wildlife Icon"
+          className="mx-auto mb-4 w-20 h-20 object-contain"
+        />
         <div className="text-center mb-16 animate-fade-up">
           <p className="text-sm font-semibold uppercase text-emerald-600 tracking-widest mb-2">
             Should know before you travel
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Good to Know 
+            Good to Know
           </h2>
           <div className="mb-8">
             <span className="text-xl tracking-widest text-muted-foreground">. . . . . . .</span>
@@ -62,13 +63,28 @@ export function Know() {
 
         <Card className="border-0 shadow-[var(--shadow-earth)] animate-fade-up">
           <CardContent className="p-8">
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full space-y-4">
               {know.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-border">
-                  <AccordionTrigger className="text-left hover:text-emerald-600 transition-colors py-6">
-                    <span className="text-lg font-semibold">{faq.question}</span>
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="border border-gray-200 rounded-xl shadow-sm overflow-hidden 
+                             transition-all data-[state=open]:shadow-lg data-[state=open]:border-emerald-500"
+                >
+                  <AccordionTrigger
+                    className="flex w-full px-6 py-5 text-left 
+                               bg-gray-50 hover:bg-gray-100 
+                               font-semibold text-gray-800
+                               data-[state=open]:bg-white data-[state=open]:text-emerald-700"
+                  >
+                    <span className="text-lg">{faq.question}</span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground font-serif leading-relaxed pb-6">
+
+                  <AccordionContent
+                    className="px-6 pb-6 text-gray-600 font-serif leading-relaxed border-t border-gray-100 
+                               bg-white data-[state=open]:animate-slide-down 
+                               data-[state=closed]:animate-slide-up"
+                  >
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -78,23 +94,24 @@ export function Know() {
         </Card>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 p-4">
-          <a href='mailto:info@safari.com'>
-          <Button
-            variant="safari-outline"
-            size="lg"
-            className="w-full text-black md:w-auto px-8 py-6 rounded-full shadow-lg border-2 border-border">
-            <span className="font-semibold">Email Our Experts</span>
-          </Button>
+          <a href="mailto:info@safari.com">
+            <Button
+              variant="safari-outline"
+              size="lg"
+              className="w-full text-black md:w-auto px-8 py-6 rounded-full shadow-lg border-2 border-border"
+            >
+              <span className="font-semibold">Email Our Experts</span>
+            </Button>
           </a>
-           <a href='tel:+255698809207'>
-          <Button
-            variant="safari"
-            size="lg"
-            className="w-full md:w-auto px-8 py-6 rounded-full shadow-lg flex items-center justify-center"
-          >
-            <Mail className="mr-2 h-4 w-4" />
-            <span className="font-semibold">Call +255 698 809 207</span>
-          </Button>
+          <a href="tel:+255698809207">
+            <Button
+              variant="safari"
+              size="lg"
+              className="w-full md:w-auto px-8 py-6 rounded-full shadow-lg flex items-center justify-center"
+            >
+              <Mail className="mr-2 h-4 w-4" />
+              <span className="font-semibold">Call +255 698 809 207</span>
+            </Button>
           </a>
         </div>
       </div>

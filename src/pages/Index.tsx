@@ -16,7 +16,10 @@ import { Know } from '@/components/toknow';
 import  Wild  from '@/components/Wild'
 import Site from '@/components/Site'
 import Event from '@/components/Event'
+import Popular from '@/components/Popular'
+import   DifferentAreas  from '@/components/DifferentAreas'
 import { Connect } from '@/components/Connect'
+import Something from '@/components/Something'
 import { NewsletterSection } from '@/components/NewsletterSection';
 
 const Index = () => {
@@ -27,13 +30,14 @@ const Index = () => {
     
       <HeroSection />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+      <main >
         <DestinationsSection />
         <SafariExperiencesSection />
         <AccommodationSection />
         <ActivitiesSection />
         <WildlifeSection />
         <PackagesSection />
+        <Something />
         <StatsSection />
         <Maasai />
         <TestimonialsSection />
@@ -44,6 +48,8 @@ const Index = () => {
         <Connect />
         <Site/>
         <Event/>
+        <Popular />
+        <DifferentAreas />
         <NewsletterSection />
       </main>
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import monthImage from '@/assets/month.png'
+import { Link } from "react-router-dom";
 
 type MonthData = {
   title: string;
@@ -86,7 +87,7 @@ export default function Event() {
   const [activeMonth, setActiveMonth] = useState("Jan");
 
   return (
-    <section className="py-16">
+    <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
       <div className="text-center mb-12">
         <img
             src={monthImage}
@@ -109,7 +110,7 @@ export default function Event() {
             className={`text-lg font-semibold px-2 ${
               activeMonth === month
                 ? "text-green-600 border-b-2 border-green-600 font-mono"
-                : "text-muted-foreground font-serif border-b-2 hover:border-green-600"
+                : "text-muted-foreground font-serif hover:font-mono  hover:border-green-600"
             }`}>
             {month}
           </button>))}
@@ -123,9 +124,12 @@ export default function Event() {
           <p className="text-lg text-muted-foreground font-serif leading-relaxed mb-8" >
             {months[activeMonth].description}
           </p>
+          <Link to="/contact">
           <button className="text-yellow-600 font-semibold hover:underline text-lg" >
             → VIEW TOURS
+            
           </button>
+          </Link>
         </div>
         <div className="flex justify-center md:justify-end">
           <img

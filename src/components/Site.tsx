@@ -3,7 +3,7 @@ import AfricImage from "@/assets/Afric.png"
 
 export function Site() {
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto">
+    <section className="py-20  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
       <div className="text-center mb-16">
         <img
           src={AfricImage}

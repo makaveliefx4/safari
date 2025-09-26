@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, Star, Calendar, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
-import mapImage from '@/assets/map.png'; // Assuming you have this image
+import mapImage from '@/assets/map.png'; // Your icon image
 
 const packages = [
   {
@@ -83,11 +83,15 @@ export function PackagesSection() {
 
   return (
     <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6 animate-fade-in-out">
-          <img
-            src={mapImage}
-						alt="African Wildlife Icon"
-						className="mx-auto mb-4 w-20 h-20 object-contain"/>
+      <div className="max-w-7xl mx-auto px-6 animate-fade-in-out">
+        {/* Top Icon */}
+        <img
+          src={mapImage}
+          alt="African Wildlife Icon"
+          className="mx-auto mb-4 w-20 h-20 object-contain"
+        />
+
+        {/* Header */}
         <div className="text-center mb-16 animate-fade-up">
           <p className="text-sm font-semibold uppercase text-muted-foreground tracking-widest mb-2">
             Popular Areas
@@ -99,12 +103,15 @@ export function PackagesSection() {
             <span className="text-xl tracking-widest text-muted-foreground">. . . . . . .</span>
           </div>
         </div>
+
+        {/* Features */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {packageFeatures.map((feature, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="text-center animate-scale-in"
-              style={{ animationDelay: `${index * 0.1}s` }}>
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <div className="bg-accent/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="h-8 w-8 text-accent" />
               </div>
@@ -113,14 +120,16 @@ export function PackagesSection() {
           ))}
         </div>
 
+        {/* Packages */}
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {packages.map((pkg, index) => (
-            <Card 
-              key={pkg.id} 
+            <Card
+              key={pkg.id}
               className={`overflow-hidden border-0 shadow-[var(--shadow-earth)] luxury-hover animate-scale-in relative ${
                 pkg.popular ? 'ring-2 ring-accent' : ''
               }`}
-              style={{ animationDelay: `${index * 0.2}s` }} >
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               {pkg.popular && (
                 <div className="absolute top-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
                   <div className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-bold">
@@ -128,14 +137,16 @@ export function PackagesSection() {
                   </div>
                 </div>
               )}
-              
+
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-foreground mb-2">{pkg.name}</h3>
                   <div className="flex items-center justify-center space-x-2 mb-4">
                     <span className="text-4xl font-bold text-accent">{pkg.price}</span>
                     <div className="text-left">
-                      <span className="text-sm text-muted-foreground line-through block">{pkg.originalPrice}</span>
+                      <span className="text-sm text-muted-foreground line-through block">
+                        {pkg.originalPrice}
+                      </span>
                       <span className="text-xs text-muted-foreground">per person</span>
                     </div>
                   </div>
@@ -159,9 +170,10 @@ export function PackagesSection() {
                   <h4 className="font-semibold text-foreground mb-3">Destinations</h4>
                   <div className="flex flex-wrap gap-2">
                     {pkg.destinations.map((destination) => (
-                      <span 
+                      <span
                         key={destination}
-                        className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium" >
+                        className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                      >
                         {destination}
                       </span>
                     ))}
@@ -189,20 +201,22 @@ export function PackagesSection() {
                   <h4 className="font-semibold text-foreground mb-3">Highlights</h4>
                   <div className="flex flex-wrap gap-2">
                     {pkg.highlights.map((highlight) => (
-                      <span 
+                      <span
                         key={highlight}
-                        className="bg-accent/10 text-accent px-2 py-1 rounded text-xs font-medium" >
+                        className="bg-accent/10 text-accent px-2 py-1 rounded text-xs font-medium"
+                      >
                         {highlight}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                <Button 
-                  variant={pkg.popular ? 'safari-outline' : 'safari-outline'} 
-                  size="lg" 
+                <Button
+                  variant={pkg.popular ? 'safari-outline' : 'safari-outline'}
+                  size="lg"
                   className="w-full text-black group w-full md:w-auto px-8 py-6 rounded-full shadow-lg border-2 border-border"
-                  onClick={() => navigate('/contact')}>
+                  onClick={() => navigate('/contact')}
+                >
                   Book This Package
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
@@ -211,28 +225,7 @@ export function PackagesSection() {
           ))}
         </div>
 
-        <Card className='bg-[url("https://cloudfront.safaribookings.com/blog/2024/10/00-Top_10_Best_African_Safari_Parks_and_Destinations_of_2024-BW-header1200px.jpg")] rounded-2xl bg-fixed bg-cover bg-center shadow-[var(--shadow-earth)]'>
-         <div className="absolute inset-0 rounded-full "></div>
-          <CardContent className="p-12 text-center bg-black/50">
-            <h3 className="text-3xl font-bold  text-white mb-4">
-              Need Something Different?
-            </h3>
-            <p className="text-xl text-white mb-8 font-serif max-w-2xl mx-auto">
-              Our safari specialists can create a completely custom itinerary tailored to your 
-              specific interests, budget, and travel dates.
-            </p>
-            <div className="flex flex-col rounded-full sm:flex-row gap-4 justify-center">
-               <Button
-                variant="safari-outline"
-                size="lg"
-                className="bg-transparent text-white w-full md:w-auto px-8 py-6 rounded-full shadow-lg border-2 border-border"
-                onClick={() => navigate('/contact')}>
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                <span className="font-semibold">OUR REVIEWS</span>
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
+      
       </div>
     </section>
   );

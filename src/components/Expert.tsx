@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import lolaImage from '@/assets/lola.jpg'
 
 
 export function Expert() {
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden rounded-3xl">
-=      <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed rounded-3xl"
-        style={{ backgroundImage: `url('https://www.go2africa.com/wp-content/uploads/2020/04/lion_madikwe_go2africa.jpg')` }}
-      >
+    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden ">
+      <div className="absolute inset-0 bg-cover bg-center bg-fixed "
+        style={{ backgroundImage: `url(${lolaImage})` }}>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-8 text-white h-full">

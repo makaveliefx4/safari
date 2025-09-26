@@ -19,10 +19,10 @@ export function WildlifeSection() {
 					</h2>
         </div>
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-        <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+        <div className="relative w-full h-[550px] rounded-2xl overflow-hidden shadow-2xl">
           <img
-            src={NatureImage}
-            alt="Lion Moment"
+            src="https://www.discoverafrica.com/wp-content/uploads/2018/09/13anantarastanley-livingstonevictoria-fallshotelsafari-activities1920x0137-Medium.jpg"
+            alt="Moment"
             className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
@@ -46,7 +46,7 @@ export function WildlifeSection() {
           <div className="grid grid-cols-2 gap-4">
             <div className="rounded-2xl overflow-hidden shadow-lg animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <img
-                src="https://wildsafariguide.com/wp-content/uploads/2024/11/Ngorongoro-Crater-in-Tanzania.jpg"
+                src="https://leopardorchidsafaris.co.ke/wp-content/uploads/2021/12/d1e0e2aecf6fe245a59-800.jpg"
                 alt="Ngorongoro Crater"
                 className="w-full h-full object-cover"/>
               <div className="p-4">

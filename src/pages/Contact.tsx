@@ -23,6 +23,7 @@ import girafeImage from '@/assets/girafe.jpg'
 import lionImage from '@/assets/lion.jpg'
 import phoneImage from '@/assets/phone.png'
 import carImage from '@/assets/car.png'
+import planImage from '@/assets/plan.png'
 const MessageModal = ({ isOpen, onClose, formData }) => {
   if (!isOpen) return null;
 
@@ -161,14 +162,14 @@ export function Contact() {
           
          
             <div className="text-center mb-16 animate-fade-up">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
                 Book Your Unforgettable
               </h2>
               <div className="mb-8">
                 <span className="text-xl tracking-widest text-white">. . . . . . .</span>
               </div>
-              <p className="text-sm font-semibold text-white tracking-widest mb-2">
-                African Safari Today
+              <p className="text-sm font-semibold font-serif text-white tracking-widest mb-2">
+                Book you're African Safari Today
               </p>
             </div>      
           </div>
@@ -532,6 +533,11 @@ export function Contact() {
         
         <section className="bg-white py-16 rounded-[50px]">
           <div className="max-w-5xl mx-auto flex flex-col items-center">
+           <div className="max-w-5xl mx-auto flex flex-col items-center">
+           <img
+            src={planImage}
+						alt="African Wildlife Icon"
+						className="mx-auto mb-4 w-20 h-20 object-contain"/>
             <h1 className="text-3xl md:text-4xl font-serif font-semibold text-gray-900 mb-6 text-center">
               Start Planning <span className="italic font-normal">your</span> adventure
             </h1>
@@ -565,13 +571,13 @@ export function Contact() {
                 </p>
               </div>
             </div>
-            
+            </div>
           </div>
           
           
         </section>
 
-        <section className="bg-white py-10 rounded-[20px]">
+        <section className="bg-transparent py-20 rounded-[20px]">
            <div className="flex justify-center mb-6 -mt-20">
           <img
             src={carImage}
