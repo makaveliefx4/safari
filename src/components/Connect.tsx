@@ -6,16 +6,16 @@ import MaasaiImage from "@/assets/Maasai.png"
 export function Connect() {
     return(
         <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
-            <div className="text-center mb-16">
-                <img
-                src={AfricaImage}
-                alt="Africa Outline"
-                className="mx-auto mb-4 w-20 h-20 object-contain"/>
-                <p className="text-sm font-light uppercase tracking-widest mb-2 text-gray-700">
-                    HOW TO BOOK YOUR
-                </p>
-                <div className="mb-6">
-                <span className="text-xl tracking-widest text-muted-foreground">. . . . . . .</span>
+      <div className="text-center mb-16">
+           <img
+           src={AfricaImage}
+           alt="Africa Outline"
+           className="mx-auto mb-4 w-20 h-20 object-contain"/>
+           <p className="text-sm font-light uppercase tracking-widest mb-2 text-gray-700">
+               HOW TO BOOK YOUR
+           </p>
+           <div className="mb-6">
+           <span className="text-xl tracking-widest text-muted-foreground">. . . . . . .</span>
           </div>
                 <h2 className="text-4xl md:text-5xl font-bold ">
                     Dream Africa Holiday

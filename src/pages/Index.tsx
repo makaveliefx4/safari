@@ -21,6 +21,7 @@ import   DifferentAreas  from '@/components/DifferentAreas'
 import { Connect } from '@/components/Connect'
 import Something from '@/components/Something'
 import { NewsletterSection } from '@/components/NewsletterSection';
+import BestTimeToGo from '@/components/BestTimeToGo';
 
 const Index = () => {
   return (
@@ -50,6 +51,7 @@ const Index = () => {
         <Event/>
         <Popular />
         <DifferentAreas />
+        <BestTimeToGo />
         <NewsletterSection />
       </main>
 
