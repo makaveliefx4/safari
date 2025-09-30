@@ -70,7 +70,7 @@ const ImageCardSmall = ({ title, description, imageUrl, onClick }) => (
       <h2 className="text-xl font-bold font-serif text-white mb-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
         {title}
       </h2>
-      <p className="text-sm text-gray-200  font-serif transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
+      <p className="text-sm text-gray-200 font-serif transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
         {description}
       </p>
     </div>

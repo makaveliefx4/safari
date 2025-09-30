@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
 import desImage from '@/assets/des.png';
-import carImage from '@/assets/car.png'
+import loImage from '@/assets/lo.png'
 
 const destinations = [
   {
@@ -136,7 +136,7 @@ export default function Destinations() {
         <section className="bg-white py-10 rounded-[20px]">
                <div className="flex justify-center mb-6 -mt-20">
               <img
-                src={carImage}
+                src={loImage}
                 alt="Eagle Icon"
                 className="h-[200px] w-[200px] object-contain drop-shadow-lg filter"
               />

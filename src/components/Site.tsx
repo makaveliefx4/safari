@@ -45,7 +45,7 @@ export function Site() {
           </p>
           <a
             href="#"
-            className="inline-flex items-center font-semibold text-yellow-600 hover:text-yellow-800 transition duration-5000 hover:underline">
+            className="inline-flex  items-center font-semibold text-yellow-600 hover:text-yellow-800 transition duration-5000">
             → VISIT TANZANIA
           </a>
         </div>

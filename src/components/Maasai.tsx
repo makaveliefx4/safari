@@ -9,8 +9,7 @@ export function Maasai() {
         <img
           src={MaasaiImage}
           alt="Culture Maasai"
-          className="mx-auto mb-4 w-20 h-20 object-contain"
-        />
+          className="mx-auto mb-4 w-20 h-20 object-contain"/>
         <p className="text-lg font-semibold font-serif uppercase text-muted-foreground tracking-widest mb-2">
           Learn From Locals
         </p>

@@ -22,7 +22,7 @@ import tanzaniaImage from '@/assets/tanzania.png'
 import girafeImage from '@/assets/girafe.jpg'
 import lionImage from '@/assets/lion.jpg'
 import phoneImage from '@/assets/phone.png'
-import carImage from '@/assets/car.png'
+import loImage from '@/assets/lo.png'
 import planImage from '@/assets/plan.png'
 const MessageModal = ({ isOpen, onClose, formData }) => {
   if (!isOpen) return null;
@@ -580,7 +580,7 @@ export function Contact() {
         <section className="bg-transparent py-20 rounded-[20px]">
            <div className="flex justify-center mb-6 -mt-20">
           <img
-            src={carImage}
+            src={loImage}
             alt="Eagle Icon"
             className="h-[200px] w-[200px] object-contain drop-shadow-lg filter"
           />
