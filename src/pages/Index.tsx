@@ -17,7 +17,8 @@ import  Wild  from '@/components/Wild'
 import Site from '@/components/Site'
 import Event from '@/components/Event'
 import Popular from '@/components/Popular'
-import   DifferentAreas  from '@/components/DifferentAreas'
+import DifferentAreas  from '@/components/DifferentAreas'
+import Hiking from '@/components/Hiking'
 import { Connect } from '@/components/Connect'
 import Something from '@/components/Something'
 import { NewsletterSection } from '@/components/NewsletterSection';
@@ -52,6 +53,7 @@ const Index = () => {
         <Popular />
         <DifferentAreas />
         <BestTimeToGo />
+        <Hiking />
         <NewsletterSection />
       </main>
 
